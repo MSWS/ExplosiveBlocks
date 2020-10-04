@@ -1,0 +1,6 @@
+main: xyz.msws.explosive.ExplosiveBlocks
+name: ExplosiveBlocks
+version: 1.0
+author: MSWS
+description: Customize block explosions by type
+api-version: 1.13

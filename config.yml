@@ -1,0 +1,20 @@
+# Valid Triggers:
+# Explosions - TNT, Creepers, etc.
+# Fire - Flint & Steel, Firespread, lava, etc.
+# Arrow - Regular arrow lands on block
+# FireArrow - Arrow on fire lands on block
+# Redstone - Block is powered by redstone
+# Custom - Custom explosion (ie plugins)
+
+Explosions:
+  REDSTONE_BLOCK:
+    Power: 2.0
+    Triggers:
+      Explosions: true
+      Fire: false
+      Default: false
+  COAL_BLOCK:
+    Power: 1.0
+    Triggers:
+      Fire: true
+      Default: false
