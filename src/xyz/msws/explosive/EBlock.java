@@ -6,6 +6,11 @@ import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.configuration.serialization.ConfigurationSerializable;
 
+/**
+ * Represents an explosive block
+ * @author msws
+ *
+ */
 public interface EBlock extends ConfigurationSerializable {
 	float getPower();
 

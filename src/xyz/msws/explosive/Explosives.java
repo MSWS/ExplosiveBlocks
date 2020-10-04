@@ -7,6 +7,13 @@ import java.util.Set;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 
+/**
+ * Wrapper for a set of EBlocks to allow for easy access to grabbing the
+ * appropriate EBlock
+ * 
+ * @author msws
+ *
+ */
 public class Explosives implements Collection<EBlock> {
 
 	private Set<EBlock> blocks;

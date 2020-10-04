@@ -16,6 +16,12 @@ import org.bukkit.configuration.serialization.SerializableAs;
 
 import xyz.msws.explosive.event.BlockCustomExplodeEvent;
 
+/**
+ * Native implementation of EBlock interface
+ * 
+ * @author msws
+ *
+ */
 @SerializableAs("Explosive")
 public class NativeBlock implements EBlock {
 

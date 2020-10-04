@@ -20,6 +20,12 @@ import xyz.msws.explosive.listeners.MoveListener;
 import xyz.msws.explosive.listeners.RedstoneListener;
 import xyz.msws.explosive.listeners.RightClickListener;
 
+/**
+ * A plugin to allow for explosion customization
+ * 
+ * @author msws
+ *
+ */
 public class ExplosiveBlocks extends JavaPlugin {
 	private Set<AbstractListener> listeners;
 	private Explosives explosives;
@@ -77,18 +83,34 @@ public class ExplosiveBlocks extends JavaPlugin {
 				explosives.size() == 1 ? "" : "s"));
 	}
 
+	/**
+	 * Returns the explosives registered
+	 * @return
+	 */
 	public Explosives getExplosives() {
 		return explosives;
 	}
 
+	/**
+	 * Returns the list of listeners
+	 * @return
+	 */
 	public Set<AbstractListener> getListeners() {
 		return listeners;
 	}
 
+	/**
+	 * Registers the listener to the list of listeners
+	 * @param listener
+	 */
 	public void registerListener(AbstractListener listener) {
 		listeners.add(listener);
 	}
 
+	/**
+	 * Removes and unregisters the listener
+	 * @param listener
+	 */
 	public void unregisterListener(AbstractListener listener) {
 		if (!listeners.contains(listener))
 			return;

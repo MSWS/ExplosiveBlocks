@@ -8,6 +8,12 @@ import org.bukkit.event.HandlerList;
 import xyz.msws.explosive.AbstractListener;
 import xyz.msws.explosive.EBlock;
 
+/**
+ * Called when a custom block is triggered
+ * 
+ * @author msws
+ *
+ */
 public class BlockCustomExplodeEvent extends Event implements Cancellable {
 
 	private static final HandlerList handlers = new HandlerList();
