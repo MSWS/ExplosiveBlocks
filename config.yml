@@ -1,20 +1,28 @@
 # Valid Triggers:
-# Explosions - TNT, Creepers, etc.
+# Explosion - TNT, Creepers, etc.
 # Fire - Flint & Steel, Firespread, lava, etc.
 # Arrow - Regular arrow lands on block
 # FireArrow - Arrow on fire lands on block
 # Redstone - Block is powered by redstone
+# Click - Player clicks on block (left click)
+# RightClick - Player right clicks on block
+# Break - Block is broken
+# Move - Block is moved
 # Custom - Custom explosion (ie plugins)
 
-Explosions:
-  REDSTONE_BLOCK:
-    Power: 2.0
-    Triggers:
-      Explosions: true
-      Fire: false
-      Default: false
-  COAL_BLOCK:
-    Power: 1.0
-    Triggers:
-      Fire: true
-      Default: false
+MaxExplosives: 3 # Max explosions per second
+
+Explosives:
+- ==: Explosive
+  Material: STONE
+  BreakBlocks: true
+  Fire: false
+  Power: 1.5
+  Triggers:
+  - FIREARROW
+  - REDSTONE
+- ==: Explosive
+  Material: OBSIDIAN
+  Power: 5
+  Triggers:
+  - BREAK

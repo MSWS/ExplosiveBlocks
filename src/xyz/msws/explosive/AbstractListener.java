@@ -6,10 +6,12 @@ import org.bukkit.plugin.Plugin;
 
 public abstract class AbstractListener implements Listener {
 	private Plugin plugin;
+	protected Explosives explosives;
 
-	public AbstractListener(Plugin plugin) {
+	public AbstractListener(Plugin plugin, Explosives explosives) {
 		Bukkit.getPluginManager().registerEvents(this, plugin);
 
+		this.explosives = explosives;
 		this.plugin = plugin;
 	}
 
@@ -17,7 +19,11 @@ public abstract class AbstractListener implements Listener {
 		return plugin;
 	}
 
+	public Explosives getExplosives() {
+		return explosives;
+	}
+
 	public abstract Trigger getType();
-	
+
 	public abstract void unregister();
 }
